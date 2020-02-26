@@ -1,0 +1,178 @@
+:root {
+  --main-gray: #303840;
+  --main-blue: hsla(227, 95%, 45%, 0.76);
+  --main-text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em purple;
+  --main-transition: background 0.2s ease-out;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  width: 100%;
+  background: url("https://www.pixel4k.com/wp-content/uploads/2018/03/Deep%20Space%204K4145111940.jpg");
+  background-size: cover;
+}
+
+/* FOR DESKTOP */ 
+@media only screen and (max-width: 80em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* FOR TABLET PORTRAIT MODE */
+@media only screen and (max-width: 64em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* FOR MOBILE */
+@media only screen and (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/*------BASE------*/
+
+body {
+  font-family: 'Verdana', sans-serif;
+  font-size: 1.8rem;
+  color: whitesmoke;
+  
+}
+
+h1 {
+  font-size: 4rem;
+  border: solid;
+  border-radius: 1em;
+  padding: .3em;
+  text-shadow: var(--main-text-shadow);
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: 550;
+  text-shadow: var(--main-text-shadow);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+ box-shadow: var(--main-text-shadow);
+ transition: transform 0.3s ease-out;
+}
+
+img:hover {
+  transform: translateY(10px);
+}
+/* ------END BASE------ */
+
+/* NAV */
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  background-color: var(--main-blue);
+  box-shadow: 0rem .6rem 1rem;
+  z-index: 1;
+  color: whitesmoke;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem 2rem;
+  text-shadow: var(--main-text-shadow);
+}
+
+.nav-item:hover {
+  background: black;
+}
+
+.nav-item {
+  transition: var(--main-transition);
+}
+
+.nav-item a {
+  padding: 0 3rem;
+  font-weight: 200;
+  color: whitesmoke;
+  font-weight: 575;
+}
+
+@media only screen and (max-width: 28.75em) {
+  #navbar {
+    justify-content: center;
+  }
+}
+/* END NAV */
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#welcome-section > p {
+  font-size: 2rem;
+  font-style: italic;
+  box-shadow: 0 2px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(325px, 1fr));
+  justify-items: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+#projects {
+  padding: 8rem;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.contact-links {
+  margin: 2vw; 
+}
+
+#fcc-profile-link {
+  margin: .5vw;
+}
+
+#profile-link {
+  margin: .5vh;
+}
+
+#footer-quote {
+  text-align: center;
+  font-style: italic;
+  padding-bottom: .01em;
+}
+
+#footer-quote-author {
+   margin-left: 15em;
+}
+
+
